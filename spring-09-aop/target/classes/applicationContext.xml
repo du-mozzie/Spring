@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--开启注解的支持-->
+    <aop:aspectj-autoproxy/>
+
+    <bean id="annotation" class="com.du.diy.AnnotationPointCut"/>
+    <bean id="MyCRUDImpl" class="com.du.service.MyCRUDImpl"/>
+
+
+    <!--<bean id="AfterLog" class="com.du.log.AfterLog"/>
+        <bean id="MyLog" class="com.du.log.MyLog"/>-->
+
+
+    <!--<aop:config>
+        &lt;!&ndash;切入点pointcut,expressio表达式 = nexecution(要执行的位置* * * * *)&ndash;&gt;
+        <aop:pointcut id="pointcut" expression="execution(* com.du.service.MyCRUDImpl.*(..))"/>
+        &lt;!&ndash;执行环绕增加!&ndash;&gt;
+        <aop:advisor advice-ref="MyLog" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="AfterLog" pointcut-ref="pointcut"/>
+    </aop:config>-->
+
+</beans>

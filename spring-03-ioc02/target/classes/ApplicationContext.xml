@@ -1,0 +1,18 @@
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    &lt;!&ndash;<bean id="user" class="com.du.pojo.User">
+        <property name="name" value="Du"/>
+    </bean>&ndash;&gt;
+
+    &lt;!&ndash;有参构造方法&ndash;&gt;
+    <bean id="user" class="com.du.pojo.User">
+        <constructor-arg name="name" value="Du"/>
+        <constructor-arg name="age" value="18"/>
+    </bean>
+
+</beans>-->
